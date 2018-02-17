@@ -35,15 +35,30 @@ var donutBox = {
 	types: ["old fashion", "glazed", "chocolate", "jelly-filled", "sprinkles", "red velvet"],
 	taste: "fabulous"
 };
+function whereToDonut(obj){
+	for(var prop in obj){
+		console.log(prop);
+	}
+	return obj;
+}
 
-
+whereToDonut(donutBox);
 
 /*2.  Create a function that will take in an object and loop through the properties of that object.
 Console.log the values of the object. Use the donutBox object from the previous exercise above*/
 
 /*@param {Object}
-@return {Object}*/
+@return {Object}
 
+*/
+
+function getValues(obj){
+	for (var prop in obj){
+		console.log(obj[prop]);
+	}
+	return obj;
+}
+console.log(donutBox);
 
 
 /*3. Create a function that will take in an object and will delete the taste property from the donutBox object above.*/
