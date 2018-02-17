@@ -66,14 +66,36 @@ console.log(donutBox);
 /*@param {Object}
 @return {Object}*/
 
+function takeOut(obj){
+	
+	delete obj.taste;
+  	return obj;
+}
 
+console.log(takeOut(donutBox));
 
 /*4. Create a function that will take in an object and will return all the values of the object in an array.*/
 
 /*@param {Object}
 @return {Array}*/
+var legend = {
+	firstName: "Bruce",
+	lastName: "Lee",
+	birthPlace: "San Francisco, CA",
+	occupation: "Bad Ass",
+	hobbies: ["martial arts", "fitness", "dancing", "knitting", "coding"]
+};
 
+function returnObj(obj){
+var emptyArray = [];
+for (var prop in obj){
 
+emptyArray.push(obj[prop])
+}
+return emptyArray;
+}
+
+console.log(returnObj(legend));
 
 /*5. Create a function that will take in an object and will return the number of properties (key -value pairs) in the object. Use the legend object above.
 
